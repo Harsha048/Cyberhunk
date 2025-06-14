@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr. HARSHA | Cybersecurity Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/74/Kali_Linux_2022.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: #f1f1f1;
+      overflow-x: hidden;
+    }
+    main {
+      flex: 1;
+    }
+    header {
+      background: rgba(31, 31, 31, 0.85);
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 255, 213, 0.2);
+    }
+    header h1 {
+      color: #00ffd5;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background: rgba(17, 17, 17, 0.85);
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0, 255, 213, 0.1);
+    }
+    nav button {
+      background: transparent;
+      border: 2px solid #00ffd5;
+      color: #00ffd5;
+      padding: 8px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    nav button:hover {
+      background-color: #00ffd5;
+      color: #000;
+    }
+    .section {
+      display: none;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 20px;
+      border-radius: 10px;
+      animation: fadeIn 0.5s ease forwards;
+    }
+    .active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      color: #00ffd5;
+      margin-bottom: 20px;
+    }
+    .project {
+      background: rgba(26, 26, 26, 0.85);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #00ffd5;
+      box-shadow: 0 4px 10px rgba(0, 255, 213, 0.1);
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(31, 31, 31, 0.85);
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mr. HARSHA - Cybersecurity Enthusiast</h1>
+    <p>Cybersecurity Engineer | Ethical Hacker | Linux Explorer</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('about')">About Me</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <main>
+    <section id="about" class="section active">
+      <h2>About Me</h2>
+      <p>Hello! I'm Mr. HARSHA, a passionate cybersecurity graduate with hands-on experience in penetration testing, Linux environments, and security tools. I've built my own home lab using Kali Linux, Ubuntu, and VirtualBox. Currently diving deeper into tools like Nmap, Metasploit, Burp Suite, and more.</p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Operating Systems: Kali Linux, Ubuntu, Windows</li>
+        <li>Tools: Nmap, Metasploit, UFW, Burp Suite, Wireshark</li>
+        <li>Languages: Bash, Python (Basics)</li>
+        <li>Other: VirtualBox, Termux, Basic Networking</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Home Lab Setup</h3>
+        <p>Created a personal cybersecurity lab using VirtualBox. Installed Kali Linux and Ubuntu VMs for practicing ethical hacking techniques and configurations.</p>
+      </div>
+      <div class="project">
+        <h3>Network Scanning with Nmap</h3>
+        <p>Performed various scans to identify open ports, services, and vulnerabilities on test machines.</p>
+      </div>
+      <div class="project">
+        <h3>Vulnerability Exploitation using Metasploit</h3>
+        <p>Used Metasploit Framework to exploit known vulnerabilities in test environments and gained shell access.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: harsha18.c@gmail.com</p>
+      <p>Github: https://github.com/Harsha048</p>
+      <p>LinkedIn: https://linkedin.com/in/harsha-c-2263ab280</p>
+      <p>Phone No.: +91-7022489920</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mr. HARSHA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
